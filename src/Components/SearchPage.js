@@ -2,33 +2,66 @@ import React from 'react';
 import MainNavbar from './NavComponent/MainNavbar';
 import SecondNavbar from './NavComponent/SecondNavbar';
 import SearchBar from './SearchComponent/SearchBar';
-import University from './university.jpg';
+import university from './university.jpg';
+import university2 from './university2.jpg';
+import university3 from './university3.png';
+import course1 from './course1.jpg';
+import course2 from './course2.png';
+import course3 from './course3.jpg';
 import './style.css';
 const SearchPage = () => {
-	const details = [
+	const Collegedetails = [
 		{
 			university: 'Harvard University',
+			image: university,
 			location: 'Cambridge, Massacheussets',
 			fees: 'Course Fees: 9999$ - 20,000$',
 			date: 'Sept - Nov 2021',
 			rating: 'IELTS: 7.5',
-			button: 'Add to favourites',
 		},
 		{
-			university: 'Harvard University',
+			university: 'California State University',
+			image: university2,
+			class: 'university-name2',
 			location: 'Cambridge, Massacheussets',
 			fees: 'Course Fees: 9999$ - 20,000$',
 			date: 'Sept - Nov 2021',
 			rating: 'IELTS: 7.5',
-			button: 'Add to favourites',
 		},
 		{
-			university: 'Harvard University',
+			university: 'Cornell University ',
+			image: university3,
 			location: 'Cambridge, Massacheussets',
 			fees: 'Course Fees: 9999$ - 20,000$',
 			date: 'Sept - Nov 2021',
 			rating: 'IELTS: 7.5',
-			button: 'Add to favourites',
+		},
+	];
+	const Coursedetails = [
+		{
+			university: 'MS Biotechnology ',
+			image: course1,
+			location: 'Cambridge, Massacheussets',
+			fees: 'Course Fees: 9999$ - 20,000$',
+			date: 'Sept - Nov 2021',
+			rating: 'IELTS: 7.5',
+		},
+		{
+			university: 'MS Chemical Engineering',
+			image: course2,
+			class: 'course-2',
+			location: 'Cambridge, Massacheussets',
+			fees: 'Course Fees: 9999$ - 20,000$',
+			date: 'Sept - Nov 2021',
+			rating: 'IELTS: 7.5',
+		},
+		{
+			university: 'MS Biotechnology ',
+			image: course3,
+			location: 'Cambridge, Massacheussets',
+			fees: 'Course Fees: 9999$ - 20,000$',
+			date: 'Sept - Nov 2021',
+			rating: 'IELTS: 7.5',
 		},
 	];
 	return (
@@ -98,12 +131,51 @@ const SearchPage = () => {
 				</div>
 			</div>
 			<p className="category">Colleges</p>
-			{details.map((data) => {
+			<a href="/details">
+				{Collegedetails.map((data) => {
+					return (
+						<div className="search-card">
+							<span className="inside-data">
+								<img
+									src={data.image}
+									alt="university"
+									style={{
+										width: '209px',
+										height: '164px',
+										borderRadius: '20px 0px 0px 20px',
+									}}
+								/>
+								<span className="university-rankings">
+									<i class="fas fa-star"></i> 8.2
+								</span>
+								<span className={`university-name ${data.class}`}>
+									{data.university}
+									<span className="fav-card">
+										<i className="far fa-star"></i>Add to Favourites
+									</span>
+								</span>
+
+								<span className="location-name">
+									<i className="fas fa-map-marker-alt"></i>
+									{data.location}
+								</span>
+								<span className="course-fees">
+									{data.fees}
+									<span className="date-details">{data.date}</span>
+								</span>
+								<span className="university-rating">{data.rating}</span>
+							</span>
+						</div>
+					);
+				})}
+			</a>
+			<p className="category2">Courses</p>
+			{Coursedetails.map((data) => {
 				return (
 					<div className="search-card">
 						<span className="inside-data">
 							<img
-								src={University}
+								src={data.image}
 								alt="university"
 								style={{
 									width: '209px',
@@ -111,10 +183,16 @@ const SearchPage = () => {
 									borderRadius: '20px 0px 0px 20px',
 								}}
 							/>
-							<span className="university-name"> {data.university} </span>
-							<span className="fav-card">
-								<i class="far fa-star"></i>Add to Favourites
+							<span className="university-rankings">
+								<i class="fas fa-star"></i> 8.2
 							</span>
+							<span className={`university-name ${data.class}`}>
+								{data.university}
+								<span className="fav-card">
+									<i class="far fa-star"></i>Add to Favourites
+								</span>
+							</span>
+
 							<span className="location-name">
 								<i class="fas fa-map-marker-alt"></i>
 								{data.location}
