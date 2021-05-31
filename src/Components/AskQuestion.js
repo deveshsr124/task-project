@@ -3,6 +3,7 @@ import MainNavbar from './NavComponent/MainNavbar';
 import SecondNavbar from './NavComponent/SecondNavbar';
 import CounselorCard from './CardComponent/CounselorCard';
 import './style.css';
+import { Link } from 'react-router-dom';
 
 const AskQuestion = () => {
 	return (
@@ -17,7 +18,9 @@ const AskQuestion = () => {
 			</h1>
 			<h2 className="counselorTxt">Our counselors and experts</h2>
 
-			<CounselorCard />
+			<Link>
+				<CounselorCard />
+			</Link>
 		</div>
 	);
 };

@@ -558,6 +558,8 @@ select {
 }
 
 .work {
+	text-decoration: none;
+	color: black;
 	height: 48px;
 	width: 240px;
 	margin-right: 10px;
@@ -588,12 +590,6 @@ select {
 	margin-left: 20px;
 	border-radius: 19px;
 }
-.progress-bar {
-	margin-top: 20px;
-	margin-left: 80px;
-	margin-right: auto;
-	width: 170px !important;
-}
 
 .progress-header {
 	font-family: Poppins;
@@ -601,7 +597,7 @@ select {
 	color: #000000;
 	font-size: 18px;
 	margin-left: 30px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .progress-header1 {
@@ -610,7 +606,7 @@ select {
 	color: #000000;
 	font-size: 18px;
 	margin-left: 60px;
-	margin-top: 30px;
+	margin-top: 10px;
 }
 
 .other-progress {
@@ -1148,4 +1144,8 @@ select {
 	/* identical to box height */
 
 	color: #000000;
+}
+
+.drop2 {
+	margin-right: 5px !important;
 }
